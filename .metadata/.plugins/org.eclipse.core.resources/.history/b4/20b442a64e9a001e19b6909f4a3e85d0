@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<%@page import="java.sql.PreparedStatement"%>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+connection conn =null;
+try{
+	class.forName("com.mysql.cj.jdbc.Driver");
+	conn.DriverManager.getConnection("");
+	String str = "";
+	PreparedStatement stmt = conn.PreparedStatement(sql);
+	
+}
+
+
+%>
+</body>
+</html>

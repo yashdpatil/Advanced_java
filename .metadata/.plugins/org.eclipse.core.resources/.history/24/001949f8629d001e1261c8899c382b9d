@@ -1,0 +1,10 @@
+import java.time.LocalDate;
+
+public class Customer {
+int id;
+String name;
+String email;
+LocalDate DateOfBirth;
+String city;
+}
+

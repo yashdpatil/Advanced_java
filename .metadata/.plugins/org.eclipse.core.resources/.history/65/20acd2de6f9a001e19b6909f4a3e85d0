@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<%@page import="java.sql.PreparedStatement"%>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%!
+offset = 0; 
+%>
+<%
+connection conn =null;
+try{
+	Class.forName("com.mysql.cj.jdbc.Driver");
+	conn.DriverManager.getConnection("");
+	String str = "select * from tbl_product limit 5 ";
+	PreparedStatement stmt = conn.PreparedStatement(sql);
+	stmt.setInt(1,offset);
+	ResultSet rs = stmt.executeQury();
+	while(rs.next()){
+		int id = rs.getInt(1);
+		String name = rs.getDouble() 
+	}
+	
+	
+}
+
+
+%>
+</body>
+</html>

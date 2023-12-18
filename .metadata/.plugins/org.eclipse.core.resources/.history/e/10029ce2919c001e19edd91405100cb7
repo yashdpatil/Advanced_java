@@ -1,0 +1,12 @@
+import java.io.IOException;
+import java.sql.SQLException;
+
+@WebServlet("/Check")
+public class Check extends HttpServlet {
+	
+	protected void doGet(HttpRequest  request, HttpResponse response) throws SQLException, IOException {
+		String name = request.getparameter("name");
+		System.out.println(name+"Heeeeeeeee");
+	}
+
+}

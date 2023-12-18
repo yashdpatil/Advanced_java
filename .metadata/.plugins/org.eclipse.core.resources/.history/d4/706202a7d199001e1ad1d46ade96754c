@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title></title>
+</head>
+<body>
+<h1> hello byee</h1>
+<button herf="Welcome.html"> click me</button>
+<a herf = "Login.html">Login</a>
+</body>
+</html>

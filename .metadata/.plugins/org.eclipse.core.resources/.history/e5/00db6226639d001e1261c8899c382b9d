@@ -1,0 +1,11 @@
+import java.time.LocalDate;
+@Entity
+@Table(name = "tbl_cust")
+public class Customer {
+	private int id;
+private String name;
+private String email;
+private LocalDate DateOfBirth;
+private String city;
+}
+

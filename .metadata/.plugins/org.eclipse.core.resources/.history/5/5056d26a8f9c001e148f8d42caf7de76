@@ -1,0 +1,11 @@
+import java.io.IOException;
+import java.net.http.HttpRequest;
+
+
+public class Check extends HttpServlet {
+	
+	protected void doGet(HttpRequest  request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+
+}

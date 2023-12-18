@@ -1,0 +1,31 @@
+
+public class AddCustomer {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Customer cust =  new Customer();
+		cust.setName("yash");
+		cust.setEmail("yash@gmail.com");
+		cust.setCity("pdlse");
+		cust.setDateOfBirth("2001-11-17");
+		CustomerDao dao = new CustomerDao();
+		dao.add(cust);
+		
+//		 Fetch Using the single dao
+		CustomerDao dao1 = new CustomerDao();
+		Customer customer = dao1.fetch(3);
+		System.out.println(customer.getName());
+		System.out.println(customer.getEmail());
+		System.out.println(customer.getDateOfBirth());
+		System.out.println(customer.getCity());
+		
+		
+		
+		// fetch USng Multiple Dao's
+		CustomerDao dao2 = new CustomerDao();
+		
+		
+	}
+
+
+}

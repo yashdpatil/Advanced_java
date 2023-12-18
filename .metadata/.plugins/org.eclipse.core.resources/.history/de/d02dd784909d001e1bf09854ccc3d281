@@ -1,0 +1,49 @@
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+//classes which contain DB specific code are commonly referred
+//to as Dao (Data Access Object)
+public class CustomerDao {
+
+	public void add(Customer customer) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("hibernate-demo"); //META-INF/persistence.xml
+		EntityManager em = emf.createEntityManager();
+
+		em.getTransaction().begin();
+		em.persist(customer); //persist will generate insert query
+		em.getTransaction().commit();
+		
+		em.close();
+		emf.close();
+	}
+	public Customer fetch(int id) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("hibernate-demo");
+		EntityManager em = emf.createEntityManager() ;
+		Customer customer = em.find(Customer.class, id);
+		em.close();
+		emf.close();
+		return customer;
+	}
+	
+		
+		
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
